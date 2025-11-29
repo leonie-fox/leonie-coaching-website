@@ -524,26 +524,26 @@ main {
     max-height: 450px;
     width: auto;
     display: block;
-    margin: 2rem auto 0;   /* centered + reasonable spacing on mobile/tablet */
+    margin: 2rem auto 0;
 }
 
 /* Desktop-only extra offset */
 @media (min-width: 900px) {
     .about-photo-main {
-        margin-top: 7rem;  /* matches your old inline style, but desktop only */
+        margin-top: 7rem;
     }
 }
 
 .about-fox-logo {
     max-width: 260px;
     display: block;
-    margin: 2.5rem auto 0;   /* nicely centered on mobile */
+    margin: 2.5rem auto 0;
 }
 
 /* Optional: keep that larger vertical gap on desktop only */
 @media (min-width: 900px) {
     .about-fox-logo {
-        margin-top: 5rem;    /* your original spacing value */
+        margin-top: 5rem;
     }
 }
 
