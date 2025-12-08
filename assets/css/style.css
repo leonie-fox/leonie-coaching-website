@@ -26,6 +26,13 @@
     box-sizing: border-box;
 }
 
+/* Disable text selection globally */
+* {
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none;     /* old Edge/IE */
+}
+
 html,
 body {
     margin: 0;
