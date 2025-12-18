@@ -103,10 +103,20 @@
 
                         <p>Dann freue ich mich sehr auf deine (unverbindliche) Nachricht.</p>
 
-                        <p>Du erreichst mich über WhatsApp / Signal / SMS hier:<br>
-                            <a href="tel:+4915511553354" style="text-decoration:none; color:inherit;">
-                                <strong class="phone-spaced">0155&nbsp;–&nbsp;11553354</strong>
-                            </a>
+                        <p>
+                            Du erreichst mich über WhatsApp / Signal / SMS hier:<br>
+                            <span class="copy-row">
+                                <a href="tel:+4915511553354" style="text-decoration:none; color:inherit;">
+                                    <strong class="phone-spaced">0155&nbsp;–&nbsp;11553354</strong>
+                                </a>
+                                <button class="copy-btn" type="button" data-copy="+4915511553354"
+                                    aria-label="Telefonnummer kopieren" title="Kopieren">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                        <path
+                                            d="M16 1H6a2 2 0 0 0-2 2v12h2V3h10V1zm3 4H10a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H10V7h9v14z" />
+                                    </svg>
+                                </button>
+                            </span>
                         </p>
 
                         <div class="messaging-links">
@@ -125,9 +135,19 @@
 
                         <p>
                             Oder per E-Mail direkt an:<br>
-                            <a href="mailto:hallo@leonie-wittkamp.de" target="_blank" class="email-link">
-                                <strong>hallo@leonie-wittkamp.de</strong>
-                            </a>
+                            <span class="copy-row">
+                                <a href="mailto:hallo@leonie-wittkamp.de" target="_blank" rel="noopener"
+                                    class="email-link">
+                                    <strong>hallo@leonie-wittkamp.de</strong>
+                                </a>
+                                <button class="copy-btn" type="button" data-copy="hallo@leonie-wittkamp.de"
+                                    aria-label="Email kopieren" title="Kopieren">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                        <path
+                                            d="M16 1H6a2 2 0 0 0-2 2v12h2V3h10V1zm3 4H10a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H10V7h9v14z" />
+                                    </svg>
+                                </button>
+                            </span>
                         </p>
 
                         <p>Oder per E-Mail über dieses Kontaktformular:</p>
@@ -212,6 +232,33 @@
         </div>
     </footer>
 
+    <script>
+        document.querySelectorAll(".copy-btn").forEach((btn) => {
+            btn.addEventListener("click", async () => {
+                const text = btn.getAttribute("data-copy") || "";
+                try {
+                    await navigator.clipboard.writeText(text);
+
+                    btn.classList.add("is-copied");
+                    const prevTitle = btn.title;
+                    btn.title = "Kopiert!";
+
+                    setTimeout(() => {
+                        btn.classList.remove("is-copied");
+                        btn.title = prevTitle || "Kopieren";
+                    }, 600);
+                } catch (e) {
+                    // Fallback if clipboard API blocked
+                    const ta = document.createElement("textarea");
+                    ta.value = text;
+                    document.body.appendChild(ta);
+                    ta.select();
+                    document.execCommand("copy");
+                    ta.remove();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

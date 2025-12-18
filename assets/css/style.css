@@ -89,6 +89,10 @@ a:hover {
     display: inline-block;
 }
 
+.phone-spaced:hover {
+    color: var(--color-primary);
+}
+
 /* =========================================================
    Images
 ========================================================= */
@@ -622,4 +626,57 @@ main {
         flex-direction: column;
         align-items: stretch;
     }
+}
+
+.copy-btn {
+    appearance: none;
+    border: 1px solid var(--color-border);
+    background: rgba(255, 255, 255, 0.7);
+    color: var(--color-muted);
+    border-radius: 999px;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    margin-left: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast), color var(--transition-fast);
+    vertical-align: middle;
+}
+
+.copy-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.copy-btn:hover {
+    background: #fff;
+    border-color: var(--color-primary-soft);
+    color: var(--color-primary);
+    transform: translateY(-1px);
+}
+
+.copy-btn:active {
+    transform: translateY(0);
+}
+
+.copy-btn:focus-visible {
+    outline: 3px solid rgba(180, 107, 92, 0.35);
+    outline-offset: 2px;
+}
+
+/* Nice “copied” state */
+.copy-btn.is-copied {
+    background: var(--color-primary-soft);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.copy-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
