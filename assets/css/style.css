@@ -464,9 +464,9 @@ main {
 .ivy-topleft {
     top: 0;
     left: 0;
-    width: 24vw;
+    width: 17.7vw;
     aspect-ratio: 1 / 1.4;
-    background-image: url("../img/ivy-topleft.png");
+    background-image: url("../img/ivy-topleft.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top left;
@@ -477,7 +477,7 @@ main {
     right: 0;
     width: 18vw;
     aspect-ratio: 1 / 1.4;
-    background-image: url("../img/ivy-topright.png");
+    background-image: url("../img/ivy-topright.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top right;

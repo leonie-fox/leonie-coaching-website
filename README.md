@@ -41,14 +41,14 @@ The site is fully responsive, lightweight, and deployed via **GitHub Pages**.
 │   ├── css/
 │   │   └── style.css
 │   └── img/
-│       ├── logo.png
+│       ├── logo.webp
 │       ├── leonie.jpeg
 │       ├── leonie2.jpeg
 │       ├── leonie3.jpeg
 │       ├── inkonstellation.png
 │       ├── therapy.png
 │       ├── brain.png
-│       └── fox.png
+│       └── fox.webp
 └── README.md
 ```
 
