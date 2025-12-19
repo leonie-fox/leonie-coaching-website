@@ -1,264 +1,124 @@
-<!DOCTYPE html>
-<html lang="de">
+---
+layout: default
+title: Kontakt – Leonie Wittkamp
+nav_active: kontakt
+include_copy_js: true
+---
 
-<head>
-    <meta charset="UTF-8" />
-    <title>Kontakt – Leonie Wittkamp</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="shortcut icon" href="/favicon.ico">
+<section class="section">
+    <div class="container">
 
-    <style>
-        /* Two-column layout */
-        .contact-columns {
-            display: grid;
-            grid-template-columns: 1fr 0.9fr;
-            gap: 2.5rem;
-            align-items: start;
-        }
+        <h1>Kontakt</h1>
 
-        @media (max-width: 800px) {
-            .contact-columns {
-                grid-template-columns: 1fr;
-            }
-        }
+        <div class="contact-columns">
 
-        /* Highlighted intro lines */
-        .contact-highlight {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            line-height: 1.45;
-        }
+            <!-- ===== LEFT COLUMN ===== -->
+            <div>
 
-        /* Form styling */
-        .contact-form label {
-            display: block;
-            margin-bottom: 1rem;
-            font-weight: 500;
-        }
+                <p class="contact-highlight">Du möchtest dein Thema gerne gemeinsam angehen?</p>
 
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 0.6rem;
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius-lg);
-            font-size: 1rem;
-            margin-top: 0.35rem;
-            font-family: inherit;
-        }
+                <p>Dann freue ich mich sehr auf deine (unverbindliche) Nachricht.</p>
 
-        .contact-form button {
-            margin-top: 0.5rem;
-        }
-    </style>
-</head>
+                <p class="phone-number-contact">
+                    Du erreichst mich über WhatsApp / Signal / SMS hier:<br>
+                    <span class="copy-row">
+                        <a href="tel:+4915511553354" style="text-decoration:none; color:inherit;">
+                            <strong class="phone-spaced">0155&nbsp;–&nbsp;11553354</strong>
+                        </a>
+                        <button class="copy-btn" type="button" data-copy="+4915511553354"
+                            aria-label="Telefonnummer kopieren" title="Kopieren">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <path
+                                    d="M16 1H6a2 2 0 0 0-2 2v12h2V3h10V1zm3 4H10a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H10V7h9v14z" />
+                            </svg>
+                        </button>
+                    </span>
+                </p>
 
-<body class="site-body">
-    <div class="ivy ivy-topleft"></div>
-    <div class="ivy ivy-topright"></div>
+                <div class="messaging-links">
 
-    <!-- ================= HEADER ================= -->
-    <header class="site-header">
-        <div class="container header-inner">
-            <div class="logo-wrap">
-                <a href="index.html" class="logo">
-                    <img src="assets/img/logo.webp" alt="Psychologisches Coaching – Leonie Wittkamp" />
-                </a>
-                <div class="logo-tagline">
-                    Leonie Wittkamp<br>
-                    <span>Psychologisches Coaching</span>
-                </div>
-            </div>
+                    <a href="https://wa.me/4915511553354" class="msg-icon" aria-label="WhatsApp" target="_blank"
+                        rel="noopener">
+                        <img src="assets/img/whatsapp.png" alt="WhatsApp Icon">
+                    </a>
 
-            <nav class="main-nav">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="systemisches-coaching.html" class="nav-link">Systemisches Coaching</a>
-                <a href="dein-coachingprozess.html" class="nav-link">Dein Coachingprozess</a>
-                <a href="ueber-mich.html" class="nav-link">Über mich</a>
-                <a href="kontakt.html" class="nav-link is-active">Kontakt</a>
-            </nav>
-        </div>
-    </header>
-
-
-    <!-- ================= MAIN ================= -->
-    <main>
-        <section class="section">
-            <div class="container">
-
-                <h1>Kontakt</h1>
-
-                <div class="contact-columns">
-
-                    <!-- ===== LEFT COLUMN ===== -->
-                    <div>
-
-                        <p class="contact-highlight">Du möchtest dein Thema gerne gemeinsam angehen?</p>
-
-                        <p>Dann freue ich mich sehr auf deine (unverbindliche) Nachricht.</p>
-
-                        <p class="phone-number-contact">
-                            Du erreichst mich über WhatsApp / Signal / SMS hier:<br>
-                            <span class="copy-row">
-                                <a href="tel:+4915511553354" style="text-decoration:none; color:inherit;">
-                                    <strong class="phone-spaced">0155&nbsp;–&nbsp;11553354</strong>
-                                </a>
-                                <button class="copy-btn" type="button" data-copy="+4915511553354"
-                                    aria-label="Telefonnummer kopieren" title="Kopieren">
-                                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                        <path
-                                            d="M16 1H6a2 2 0 0 0-2 2v12h2V3h10V1zm3 4H10a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H10V7h9v14z" />
-                                    </svg>
-                                </button>
-                            </span>
-                        </p>
-
-                        <div class="messaging-links">
-
-                            <a href="https://wa.me/4915511553354" class="msg-icon" aria-label="WhatsApp" target="_blank"
-                                rel="noopener">
-                                <img src="assets/img/whatsapp.png" alt="WhatsApp Icon">
-                            </a>
-
-                            <a href="https://signal.me/#p/+4915511553354" class="msg-icon" aria-label="Signal"
-                                target="_blank" rel="noopener">
-                                <img src="assets/img/signal.png" alt="Signal Icon">
-                            </a>
-
-                        </div>
-
-                        <p>
-                            Oder per E-Mail direkt an:<br>
-                            <span class="copy-row">
-                                <a href="mailto:hallo@leonie-wittkamp.de" target="_blank" rel="noopener"
-                                    class="email-link">
-                                    <strong>hallo@leonie-wittkamp.de</strong>
-                                </a>
-                                <button class="copy-btn" type="button" data-copy="hallo@leonie-wittkamp.de"
-                                    aria-label="Email kopieren" title="Kopieren">
-                                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                        <path
-                                            d="M16 1H6a2 2 0 0 0-2 2v12h2V3h10V1zm3 4H10a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H10V7h9v14z" />
-                                    </svg>
-                                </button>
-                            </span>
-                        </p>
-
-                        <p>Oder per E-Mail über dieses Kontaktformular:</p>
-
-                        <!-- ===== CONTACT FORM ===== -->
-                        <form class="contact-form" action="https://formspree.io/f/myzokjyw" method="POST">
-
-                            <!-- Honeypot (anti-spam) -->
-                            <input type="text" name="_gotcha" style="display:none">
-
-                            <!-- Identify source website -->
-                            <input type="hidden" name="source" value="Coaching-Website">
-
-                            <label>
-                                Name:
-                                <input type="text" name="name" required>
-                            </label>
-
-                            <label>
-                                E-Mail-Adresse:
-                                <input type="email" name="email" required>
-                            </label>
-
-                            <label>
-                                Nachricht:
-                                <textarea name="message" rows="10" required></textarea>
-                            </label>
-
-                            <button type="submit" class="btn btn-primary">Nachricht senden</button>
-
-                        </form>
-
-                    </div>
-
-
-                    <!-- ===== RIGHT COLUMN ===== -->
-                    <div>
-
-                        <p class="contact-highlight">
-                            Ich freue mich darauf, dich kennen zu lernen!
-                        </p>
-
-                        <p>
-                            Und ich kann aus eigener Erfahrung versprechen: Allein der erste Schritt der
-                            Kontaktaufnahme, auch ohne am Ende ein Coaching gemacht zu haben, wird dein Leben
-                            schon zum Besseren verändern.
-                        </p>
-
-                        <p>
-                            Denn du gehst es jetzt an! &lt;3
-                        </p>
-
-                        <img src="assets/img/autumn-leaves.webp" alt="Herbstblätter Dekoration" class="autumn-leaves">
-
-                    </div>
+                    <a href="https://signal.me/#p/+4915511553354" class="msg-icon" aria-label="Signal"
+                        target="_blank" rel="noopener">
+                        <img src="assets/img/signal.png" alt="Signal Icon">
+                    </a>
 
                 </div>
 
+                <p>
+                    Oder per E-Mail direkt an:<br>
+                    <span class="copy-row">
+                        <a href="mailto:hallo@leonie-wittkamp.de" target="_blank" rel="noopener" class="email-link">
+                            <strong>hallo@leonie-wittkamp.de</strong>
+                        </a>
+                        <button class="copy-btn" type="button" data-copy="hallo@leonie-wittkamp.de"
+                            aria-label="Email kopieren" title="Kopieren">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <path
+                                    d="M16 1H6a2 2 0 0 0-2 2v12h2V3h10V1zm3 4H10a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H10V7h9v14z" />
+                            </svg>
+                        </button>
+                    </span>
+                </p>
+
+                <p>Oder per E-Mail über dieses Kontaktformular:</p>
+
+                <!-- ===== CONTACT FORM ===== -->
+                <form class="contact-form" action="https://formspree.io/f/myzokjyw" method="POST">
+
+                    <!-- Honeypot (anti-spam) -->
+                    <input type="text" name="_gotcha" style="display:none">
+
+                    <!-- Identify source website -->
+                    <input type="hidden" name="source" value="Coaching-Website">
+
+                    <label>
+                        Name:
+                        <input type="text" name="name" required>
+                    </label>
+
+                    <label>
+                        E-Mail-Adresse:
+                        <input type="email" name="email" required>
+                    </label>
+
+                    <label>
+                        Nachricht:
+                        <textarea name="message" rows="10" required></textarea>
+                    </label>
+
+                    <button type="submit" class="btn btn-primary">Nachricht senden</button>
+
+                </form>
+
             </div>
-        </section>
-    </main>
 
+            <!-- ===== RIGHT COLUMN ===== -->
+            <div>
 
-    <!-- ================= FOOTER ================= -->
-    <footer class="site-footer">
-        <div class="container footer-inner">
+                <p class="contact-highlight">
+                    Ich freue mich darauf, dich kennen zu lernen!
+                </p>
 
-            <nav class="footer-nav">
-                <a href="index.html">Home</a>
-                <a href="systemisches-coaching.html">Systemisches Coaching</a>
-                <a href="dein-coachingprozess.html">Dein Coachingprozess</a>
-                <a href="ueber-mich.html">Über mich</a>
-                <a href="kontakt.html">Kontakt</a>
-            </nav>
+                <p>
+                    Und ich kann aus eigener Erfahrung versprechen: Allein der erste Schritt der
+                    Kontaktaufnahme, auch ohne am Ende ein Coaching gemacht zu haben, wird dein Leben
+                    schon zum Besseren verändern.
+                </p>
 
-            <div class="footer-meta">
-                <a href="datenschutz.html">Datenschutz</a>
-                <span>•</span>
-                <a href="impressum.html">Impressum</a>
+                <p>
+                    Denn du gehst es jetzt an! &lt;3
+                </p>
+
+                <img src="assets/img/autumn-leaves.webp" alt="Herbstblätter Dekoration" class="autumn-leaves">
+
             </div>
 
         </div>
-    </footer>
 
-    <script>
-        document.querySelectorAll(".copy-btn").forEach((btn) => {
-            btn.addEventListener("click", async () => {
-                const text = btn.getAttribute("data-copy") || "";
-                try {
-                    await navigator.clipboard.writeText(text);
-
-                    btn.classList.add("is-copied");
-                    const prevTitle = btn.title;
-                    btn.title = "Kopiert!";
-
-                    setTimeout(() => {
-                        btn.classList.remove("is-copied");
-                        btn.title = prevTitle || "Kopieren";
-                    }, 600);
-                } catch (e) {
-                    // Fallback if clipboard API blocked
-                    const ta = document.createElement("textarea");
-                    ta.value = text;
-                    document.body.appendChild(ta);
-                    ta.select();
-                    document.execCommand("copy");
-                    ta.remove();
-                }
-            });
-        });
-    </script>
-</body>
-
-</html>
+    </div>
+</section>

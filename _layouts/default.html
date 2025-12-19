@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        /* First-paint fallback to avoid white flash before CSS loads */
+        :root {
+            --color-bg: #f9f5f0;
+            --color-text: #1f1f1f;
+        }
+
+        html,
+        body {
+            margin: 0;
+            background: var(--color-bg);
+            color: var(--color-text);
+            min-height: 100%;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.6;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="assets/js/nav-prefetch.js" defer></script>
+    {% if page.include_copy_js %}
+    <script src="assets/js/copy.js" defer></script>
+    {% endif %}
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="shortcut icon" href="/favicon.ico">
+</head>
+
+<body class="site-body">
+    <div class="ivy ivy-topleft"></div>
+    <div class="ivy ivy-topright"></div>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo-wrap">
+                <a href="index.html" class="logo">
+                    <img src="assets/img/logo.webp" alt="Psychologisches Coaching – Leonie Wittkamp" />
+                </a>
+                <div class="logo-tagline">
+                    Leonie Wittkamp<br>
+                    <span>Psychologisches Coaching</span>
+                </div>
+            </div>
+
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link{% if page.nav_active == 'home' %} is-active{% endif %}">Home</a>
+                <a href="systemisches-coaching.html"
+                    class="nav-link{% if page.nav_active == 'coaching' %} is-active{% endif %}">Systemisches Coaching</a>
+                <a href="dein-coachingprozess.html"
+                    class="nav-link{% if page.nav_active == 'prozess' %} is-active{% endif %}">Dein Coachingprozess</a>
+                <a href="ueber-mich.html" class="nav-link{% if page.nav_active == 'about' %} is-active{% endif %}">Über
+                    mich</a>
+                <a href="kontakt.html" class="nav-link{% if page.nav_active == 'kontakt' %} is-active{% endif %}">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ================= MAIN ================= -->
+    <main>
+        {{ content }}
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="systemisches-coaching.html">Systemisches Coaching</a>
+                <a href="dein-coachingprozess.html">Dein Coachingprozess</a>
+                <a href="ueber-mich.html">Über mich</a>
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+
+            <div class="footer-meta">
+                <a href="datenschutz.html">Datenschutz</a>
+                <span>•</span>
+                <a href="impressum.html">Impressum</a>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>

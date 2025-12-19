@@ -409,6 +409,8 @@ main {
     padding: 1.25rem 0 1.75rem;
     margin-top: 2rem;
     font-size: 0.9rem;
+    position: relative;
+    z-index: 1;
 }
 
 .footer-inner {
@@ -522,7 +524,7 @@ main {
     pointer-events: none;
     position: relative;
     transform: translateY(84px);
-    z-index: -1;
+    z-index: 0;
 }
 
 /* Mobile ivy + spring branch tweaks */
@@ -683,4 +685,48 @@ main {
 
 .phone-number-contact {
     margin-bottom: 0.4rem;
+}
+
+/* =========================================================
+   Contact Page
+========================================================= */
+.contact-columns {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+@media (max-width: 800px) {
+    .contact-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contact-highlight {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.45;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    font-size: 1rem;
+    margin-top: 0.35rem;
+    font-family: inherit;
+}
+
+.contact-form button {
+    margin-top: 0.5rem;
 }
