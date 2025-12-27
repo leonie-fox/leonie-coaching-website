@@ -20,6 +20,21 @@
     --transition-fast: 0.2s ease-out;
 }
 
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-group(site-logo) {
+    animation-duration: 180ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    ::view-transition-old(root),
+    ::view-transition-new(root) {
+        animation: none;
+    }
+}
+
 *,
 *::before,
 *::after {
@@ -168,6 +183,10 @@ main {
 .logo img {
     height: 70px;
     max-width: none;
+}
+
+.logo {
+    view-transition-name: site-logo;
 }
 
 .main-nav {

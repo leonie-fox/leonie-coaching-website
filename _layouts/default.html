@@ -32,6 +32,17 @@
     </style>
     <link rel="stylesheet" href="/assets/css/style.css" />
     <script src="/assets/js/nav-prefetch.js" defer></script>
+    <script type="speculationrules">
+        {
+            "prefetch": [
+                {
+                    "source": "document",
+                    "where": { "selector_matches": ".main-nav a, .footer-nav a" },
+                    "eagerness": "moderate"
+                }
+            ]
+        }
+    </script>
     {% if page.include_copy_js %}
     <script src="/assets/js/copy.js" defer></script>
     {% endif %}

@@ -1,5 +1,9 @@
 // Prefetch linked pages on hover/focus to smooth navigation flashes.
 (() => {
+    if (window.HTMLScriptElement && HTMLScriptElement.supports && HTMLScriptElement.supports("speculationrules")) {
+        return;
+    }
+
     const cache = new Set();
 
     const prefetch = (href) => {
