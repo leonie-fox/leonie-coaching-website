@@ -1,78 +1,67 @@
-# **Leonie Coaching Website**
+# Leonie Coaching Website
 
-This repository contains the source code for the **psychological coaching website of Leonie Wittkamp**, built as a clean, elegant, mobile-friendly static site.  
-The site is fully responsive, lightweight, and deployed via **GitHub Pages**.
+Source for the psychological coaching website of Leonie Wittkamp. The site is a clean, responsive, static experience built with Jekyll layouts and plain HTML/CSS/JS.
 
----
+## Features
 
-## 🚀 **Features**
+- Shared layout with header/footer via Jekyll front matter
+- Extensionless URLs via per-page `permalink`
+- Responsive layout and lightweight assets
+- Smooth navigation with Speculation Rules and View Transitions (progressive enhancement)
+- Contact form via Formspree
 
-- Fully responsive HTML & CSS design  
-- Clean professional aesthetic  
-- Structured pages:
-  - **Home**
-  - **Systemisches Coaching**
-  - **Dein Coachingprozess**
-  - **Über mich**
-  - **Kontakt** (with Formspree integration)
-- Pure static setup — no frameworks, no build tools
+## Tech Stack
 
----
+- Jekyll (GitHub Pages compatible)
+- HTML5, CSS3, JavaScript
+- Formspree
 
-## 🧱 **Tech Stack**
-
-- **HTML5**
-- **CSS3**
-- **Formspree**
-- **GitHub Pages**
-
----
-
-## 📁 **Project Structure**
+## Project Structure
 
 ```
 /
+├── _layouts/
+│   └── default.html
 ├── index.html
 ├── systemisches-coaching.html
 ├── dein-coachingprozess.html
 ├── ueber-mich.html
 ├── kontakt.html
+├── datenschutz.html
+├── impressum.html
 ├── assets/
 │   ├── css/
 │   │   └── style.css
+│   ├── js/
+│   │   ├── nav-prefetch.js
+│   │   └── copy.js
 │   └── img/
-│       ├── logo.webp
-│       ├── leonie.jpeg
-│       ├── leonie2.jpeg
-│       ├── leonie3.jpeg
-│       ├── inkonstellation.png
-│       ├── therapy.png
-│       ├── brain.png
-│       └── fox.webp
+├── Gemfile
 └── README.md
 ```
 
----
+## Local Development
 
-## 📬 **Contact Form**
+1. `bundle install`
+2. `bundle exec jekyll serve`
+3. Open `http://localhost:4000`
 
-Formspree endpoint:  
-`https://formspree.io/f/myzokjyw`
+## Deployment (GitHub Pages)
 
----
-
-## 🌐 Deployment (GitHub Pages)
-
-1. Go to **Settings → Pages**
-2. Under *Build and Deployment*, choose:  
-   **Branch: main — / (root)**
+1. Settings -> Pages
+2. Build and Deployment:
+   - Branch: `main`
+   - Folder: `/ (root)`
 3. Save
 
-Your site will appear at:  
+Your site will appear at:
 `https://YOUR-USERNAME.github.io/leonie-coaching-website/`
 
----
+## Contact Form
 
-## 📄 License
+Formspree endpoint:
+`https://formspree.io/f/myzokjyw`
+
+## License
 
 All rights reserved Leonie Wittkamp and Vladino.
