@@ -18,7 +18,7 @@ Source for the psychological coaching website of Leonie Wittkamp. The site is a 
 
 ## Project Structure
 
-```
+```text
 /
 ├── _layouts/
 │   └── default.html
