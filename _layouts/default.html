@@ -5,6 +5,19 @@
     <meta charset="UTF-8" />
     <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+        (() => {
+            try {
+                const key = "lwc_first_load";
+                if (!sessionStorage.getItem(key)) {
+                    document.documentElement.classList.add("is-first-load");
+                    sessionStorage.setItem(key, "1");
+                }
+            } catch (e) {
+                /* no-op */
+            }
+        })();
+    </script>
     <style>
         /* First-paint fallback to avoid white flash before CSS loads */
         :root {
@@ -30,11 +43,22 @@
             box-sizing: border-box;
         }
     </style>
+    <link rel="preload" href="/assets/css/style.css" as="style" />
+    <link rel="preload" href="/assets/img/logo.webp" as="image" />
+    <link rel="preload" href="/assets/img/ivy-topleft.webp" as="image" />
+    <link rel="preload" href="/assets/img/ivy-topright.webp" as="image" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <script src="/assets/js/nav-prefetch.js" defer></script>
     <script type="speculationrules">
         {
             "prefetch": [
+                {
+                    "source": "document",
+                    "where": { "selector_matches": ".main-nav a, .footer-nav a" },
+                    "eagerness": "moderate"
+                }
+            ],
+            "prerender": [
                 {
                     "source": "document",
                     "where": { "selector_matches": ".main-nav a, .footer-nav a" },

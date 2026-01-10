@@ -20,6 +20,17 @@
     --transition-fast: 0.2s ease-out;
 }
 
+html.is-first-load body {
+    opacity: 1;
+    transition: opacity 240ms ease-out;
+}
+
+@starting-style {
+    html.is-first-load body {
+        opacity: 0;
+    }
+}
+
 @view-transition {
     navigation: auto;
 }
@@ -29,6 +40,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+    html.is-first-load body {
+        transition: none;
+    }
+
     ::view-transition-old(root),
     ::view-transition-new(root) {
         animation: none;
