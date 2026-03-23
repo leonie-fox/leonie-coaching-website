@@ -381,8 +381,9 @@ main {
    About Page (desktop-only positioning helpers)
 ========================================================= */
 .about-photo-main {
-    max-height: 450px;
-    width: auto;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
     display: block;
     margin: 2rem auto 0;
 }
@@ -391,6 +392,19 @@ main {
     .about-photo-main {
         margin-top: 7rem;
     }
+}
+
+.about-photo-secondary {
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.inkonstellation-logo {
+    border: 0.5px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    border-radius: 12px;
+    background: #fff;
+    padding: 0.3rem;
 }
 
 .about-fox-logo {
@@ -550,8 +564,10 @@ main {
     background-position: top right;
 }
 
-.autumn-leaves {
-    max-width: 300px;
+.kontakt-image {
+    display: block;
+    width: 100%;
+    max-width: none;
     margin: 4rem auto 0;
     opacity: 0.9;
 }
