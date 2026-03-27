@@ -154,6 +154,22 @@ img {
     padding-bottom: 4rem;
 }
 
+@media (max-width: 800px) {
+    .section-pad-bottom-lg {
+        padding-bottom: 2.5rem;
+    }
+}
+
+.about-du-bist-grid {
+    gap: 1rem;
+}
+
+@media (max-width: 800px) {
+    .about-du-bist-grid > :first-child {
+        margin-bottom: 1.2rem;
+    }
+}
+
 .two-columns {
     display: grid;
     gap: 1.75rem;
