@@ -783,6 +783,11 @@ main {
     font-family: inherit;
 }
 
+.contact-form textarea {
+    resize: vertical;
+    min-height: 13.2rem;
+}
+
 .contact-form button {
     margin-top: 0.5rem;
 }
