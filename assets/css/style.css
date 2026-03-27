@@ -150,6 +150,10 @@ img {
     background: rgba(255, 255, 255, 0.7);
 }
 
+.section-pad-bottom-lg {
+    padding-bottom: 4rem;
+}
+
 .two-columns {
     display: grid;
     gap: 1.75rem;
