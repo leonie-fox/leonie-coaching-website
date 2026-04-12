@@ -160,6 +160,7 @@ img {
     }
 }
 
+
 .about-du-bist-grid {
     gap: 1rem;
 }
@@ -623,6 +624,43 @@ main {
         width: 260px;
         opacity: 0.8;
         margin-top: -1rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .ivy {
+        z-index: 1 !important;
+    }
+
+    .hero-aside,
+    .reference-card {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+@media (max-width: 800px) {
+    .btn,
+    img {
+        position: relative;
+        z-index: 2;
+    }
+
+    .btn-ghost {
+        background: var(--color-bg);
+    }
+}
+
+@media (max-width: 800px) {
+    main,
+    .site-footer {
+        position: relative;
+        z-index: 2;
+    }
+
+    .site-header {
+        position: relative;
+        z-index: 0;
     }
 }
 
