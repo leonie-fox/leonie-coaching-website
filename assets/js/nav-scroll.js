@@ -2,6 +2,10 @@
     const header = document.querySelector(".site-header");
     if (!header) return;
 
+    // Tune these values to control reveal behavior.
+    const SCROLL_NOISE_THRESHOLD = 2;
+    const REVEAL_SPEED_MULTIPLIER = 1.35;
+
     const mq = window.matchMedia("(max-width: 800px)");
     let lastY = window.scrollY;
     let ticking = false;
@@ -25,13 +29,14 @@
         }
 
         const delta = currentY - lastY;
-        if (Math.abs(delta) < 2) {
+        if (delta > 0 && Math.abs(delta) < SCROLL_NOISE_THRESHOLD) {
             lastY = currentY;
             return;
         }
 
+        const adjustedDelta = delta < 0 ? delta * REVEAL_SPEED_MULTIPLIER : delta;
         const headerHeight = header.offsetHeight || 0;
-        offset = Math.min(headerHeight, Math.max(0, offset + delta));
+        offset = Math.min(headerHeight, Math.max(0, offset + adjustedDelta));
         applyOffset();
         lastY = currentY;
     };

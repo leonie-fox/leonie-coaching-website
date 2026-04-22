@@ -629,7 +629,44 @@ main {
 
 @media (max-width: 800px) {
     .ivy {
-        z-index: 1 !important;
+        z-index: 0 !important;
+    }
+
+    .site-header {
+        overflow: hidden;
+    }
+
+    .site-header::before,
+    .site-header::after {
+        content: "";
+        position: absolute;
+        top: -20px;
+        pointer-events: none;
+        opacity: 0.15;
+        z-index: 1;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .site-header::before {
+        left: -10px;
+        width: 210px;
+        aspect-ratio: 1 / 1.4;
+        background-image: url("../img/ivy-topleft.webp");
+        background-position: top left;
+    }
+
+    .site-header::after {
+        right: -10px;
+        width: 140px;
+        aspect-ratio: 1 / 1.4;
+        background-image: url("../img/ivy-topright.webp");
+        background-position: top right;
+    }
+
+    .header-inner {
+        position: relative;
+        z-index: 2;
     }
 
     .hero-aside,
@@ -656,11 +693,6 @@ main {
     .site-footer {
         position: relative;
         z-index: 2;
-    }
-
-    .site-header {
-        position: relative;
-        z-index: 0;
     }
 }
 
