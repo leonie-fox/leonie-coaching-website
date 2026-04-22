@@ -4,7 +4,6 @@
 
     // Tune these values to control reveal behavior.
     const SCROLL_NOISE_THRESHOLD = 2;
-    const REVEAL_SPEED_MULTIPLIER = 1.35;
 
     const mq = window.matchMedia("(max-width: 800px)");
     let lastY = window.scrollY;
@@ -34,9 +33,8 @@
             return;
         }
 
-        const adjustedDelta = delta < 0 ? delta * REVEAL_SPEED_MULTIPLIER : delta;
         const headerHeight = header.offsetHeight || 0;
-        offset = Math.min(headerHeight, Math.max(0, offset + adjustedDelta));
+        offset = Math.min(headerHeight, Math.max(0, offset + delta));
         applyOffset();
         lastY = currentY;
     };
